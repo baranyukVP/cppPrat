@@ -18,7 +18,10 @@
     <ClCompile Include="Unit2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source.cpp">
+    <ClCompile Include="Unit3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Unit4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
