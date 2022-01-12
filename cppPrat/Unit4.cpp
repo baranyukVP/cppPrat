@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cstring>
+#include <string>
+#include <array>
 using namespace std;
 
 int main(void) {
@@ -79,6 +81,74 @@ int main(void) {
 	}
 	
 	cout << "\nTask 7\n";
+	struct Pizza {
+		char producer[40];
+		int diameter;
+		float weight;
+	};
+
+	char p[40];
+	int d = 0;
+	float w = 0.00;
+	cin.get();
+	cout << "Enter pizza company: ";
+	cin.getline(p, 40);
+	cout << "Enter pizza diameter: ";
+	cin >> d;
+	cin.get();
+	cout << "Enter pizza weight: ";
+	cin >> w;
+	cin.get();
+
+	Pizza pizza = {*p, d, w};
+	cout << "Producer: " << pizza.producer << "\nDiameter: " << pizza.diameter << "\nWeight: " << pizza.weight << endl;
+
+	cout << "\nTask 8\n";
+	Pizza *dynamicPizza = new Pizza;
+
+	cout << "Enter pizza company: ";
+	cin.getline(dynamicPizza->producer, 40);
+	cout << "Enter pizza diameter: ";
+	cin >> dynamicPizza->diameter;
+	cin.get();
+	cout << "Enter pizza weight: ";
+	cin >> dynamicPizza->weight;
+	cin.get();
+
+	cout << "Producer: " << dynamicPizza->producer << "\nDiameter: " << dynamicPizza->diameter << "\nWeight: " << dynamicPizza->weight << endl;
+
+	cout << "\nTask 9\n";
+	CandyBar *snackBars = new CandyBar[3];
+	for (int i = 0; i < 3; i++) {
+		cout << "Enter snack name: ";
+		getline(cin, snackBars[i].name);
+		cout << "Enter sanck weight: ";
+		cin >> snackBars[i].weight;
+		cin.get();
+		cout << "Enter snack energy: ";
+		cin >> snackBars[i].energy;
+		cin.get();
+	}
+
+	for (int i = 0; i < sizeof snackBars - 1; i++) {
+		cout << snackBars[i].name << endl << snackBars[i].weight << endl << snackBars[i].energy << endl;
+	}
 	
+	cout << "\nTask 10\n";
+	array<float, 3> results;
+
+	cout << "Enter 3 race result: ";
+	for (int i = 0; i < 3; i++) {
+		cin >> results[i];
+		cin.get();
+	}
+
+	float acc = 0;
+	for (int i = 0; i < 3; i++) {
+		cout << results[i] << ", ";
+		acc += results[i];
+	}
+	cout << "\nThe average is: " << acc / 3 << endl;
+
 	return 0;
 };
