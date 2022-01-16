@@ -19,7 +19,7 @@ const int monthsInYear = 12;
 const string months[monthsInYear] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 
 int main(void) {
-	Task6();
+	Task10();
 
 	return 0;
 };
@@ -82,6 +82,7 @@ void Task4() {
 };
 
 void Task5() {
+	cout << "\nTask 5\n";
 	int sales[monthsInYear];
 	int result = 0;
 
@@ -96,6 +97,7 @@ void Task5() {
 };
 
 void Task6() {
+	cout << "\nTask 6\n";
 	const int years = 3;
 	int sales[years][monthsInYear];
 	int results[years] = { 0, 0 , 0 };
@@ -116,17 +118,74 @@ void Task6() {
 };
 
 void Task7() {
+	cout << "\nTask 7\n";
+	struct car
+	{
+		string producer;
+		int createYear;
+	};
+	int count = 0;
+	cout << "How much automobiles in your collection?";
+	cin >> count;
+	cin.get();
 
+	car *cars = new car[count];
+
+	for (int i = 0; i < count; i++) {
+		cout << "\nEnter producer: ";
+		cin >> cars[i].producer;
+		cin.get();
+		cout << "\nEnter creation year: ";
+		cin >> cars[i].createYear;
+		cin.get();
+	}
+
+	cout << "Here's your collection:\n";
+	for (int i = 0; i < count; i++) {
+		cout << "\n#" << i + 1 << " " << cars[i].createYear << " " << cars[i].producer;
+	}
 };
 
 void Task8() {
+	cout << "\nTask 8\n";
+	int counter = 0;
+	char word[255] = "";
+	while (strcmp(word, "done")) {
+		counter++;
+		cin >> word;
+	}
+	counter--;
 
+	cout << counter;
 };
 
 void Task9() {
+	cout << "\nTask 9\n";
+	int counter = 0;
+	string word = "";
+	while (word != "done") {
+		counter++;
+		cin >> word;
+	}
+	counter--;
 
+	cout << counter;
 };
 
 void Task10() {
+	cout << "\nTask 10\n";
+	int count = 0;
+	cout << "Enter the number of lines: ";
+	cin >> count;
+	cout << endl;
 
+	for (int i = 0; i < count; i++) {
+		for (int j = 0; j < count - i - 1; j++) {
+			cout << ".";
+		}
+		for (int j = count - i - 1; j < count; j++) {
+			cout << "*";
+		}
+		cout << endl;
+	}
 };
