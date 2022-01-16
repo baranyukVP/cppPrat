@@ -4,7 +4,7 @@
 #include <array>
 using namespace std;
 
-int main(void) {
+int main4(void) {
 	cout << "Task 1\n";
 	const int ArSize = 20;
 	char firstName[ArSize];
