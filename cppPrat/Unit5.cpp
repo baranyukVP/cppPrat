@@ -18,7 +18,7 @@ const int ArrSize = 100;
 const int monthsInYear = 12;
 const string months[monthsInYear] = { "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" };
 
-int main(void) {
+int main5(void) {
 	Task10();
 
 	return 0;
